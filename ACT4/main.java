@@ -1,25 +1,16 @@
 package org.example.ACT4;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class main {
     public static void main(String[] args){
-        List<Producto> productos = new ArrayList<>();
+        Set<Producto> productos = new HashSet<>();
 
-        Producto p1 = new Producto(01,"Chocolate",1500.00);
-        Producto p2 = new Producto(02,"Alfajor",1700.00);
-        Producto p3 = new Producto(01, "Chocolate blanco",1500.00);
-
-        if (!productos.contains(p1)){
-            productos.add(p1);
-        }
-        if (!productos.contains(p2)) {
-            productos.add(p2);
-        }
-        if (!productos.contains(p3)) {
-            productos.add(p3);
-        }
+        productos.add(new Producto(01,"Chocolate",1500.00));
+        productos.add(new Producto(02,"Yogurt",2000.00));
+        productos.add(new Producto(01,"Chocolate blanco",1500.00));
 
         for (Producto p : productos){
             System.out.println(p);
